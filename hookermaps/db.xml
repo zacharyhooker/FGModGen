@@ -1,172 +1,172 @@
 <?xml version='1.0' encoding='ISO-8859-1'?>
-<root version="4.0">
+<root version="4.9">
   <image>
-    <category name="xedder" mergeid="" baseicon="1" decalicon="1">
+    <category name="" mergeid="" baseicon="1" decalicon="1">
       <id-00001>
         <image type="image">
-          <bitmap>maps\abandoned-tower.jpg</bitmap>
+          <bitmap>maps/abandoned-tower.jpg</bitmap>
         </image>
         <name type="string">abandoned-tower.jpg</name>
       </id-00001>
       <id-00002>
         <image type="image">
-          <bitmap>maps\bears-and-bows.jpg</bitmap>
+          <bitmap>maps/bears-and-bows.jpg</bitmap>
         </image>
         <name type="string">bears-and-bows.jpg</name>
       </id-00002>
       <id-00003>
         <image type="image">
-          <bitmap>maps\Brazier.png</bitmap>
+          <bitmap>maps/Brazier.png</bitmap>
         </image>
         <name type="string">Brazier.png</name>
       </id-00003>
       <id-00004>
         <image type="image">
-          <bitmap>maps\Brazier_gridless.png</bitmap>
+          <bitmap>maps/Brazier_gridless.png</bitmap>
         </image>
         <name type="string">Brazier_gridless.png</name>
       </id-00004>
       <id-00005>
         <image type="image">
-          <bitmap>maps\Butler's Quarters.png</bitmap>
+          <bitmap>maps/Butler's Quarters.png</bitmap>
         </image>
         <name type="string">Butler's Quarters.png</name>
       </id-00005>
       <id-00006>
         <image type="image">
-          <bitmap>maps\Butler's Quarters_gridless.png</bitmap>
+          <bitmap>maps/Butler's Quarters_gridless.png</bitmap>
         </image>
         <name type="string">Butler's Quarters_gridless.png</name>
       </id-00006>
       <id-00007>
         <image type="image">
-          <bitmap>maps\Chamberlain's Office.png</bitmap>
+          <bitmap>maps/Chamberlain's Office.png</bitmap>
         </image>
         <name type="string">Chamberlain's Office.png</name>
       </id-00007>
       <id-00008>
         <image type="image">
-          <bitmap>maps\Chamberlain's Office_gridless.png</bitmap>
+          <bitmap>maps/Chamberlain's Office_gridless.png</bitmap>
         </image>
         <name type="string">Chamberlain's Office_gridless.png</name>
       </id-00008>
       <id-00009>
         <image type="image">
-          <bitmap>maps\crossroads.jpg</bitmap>
+          <bitmap>maps/crossroads.jpg</bitmap>
         </image>
         <name type="string">crossroads.jpg</name>
       </id-00009>
       <id-00010>
         <image type="image">
-          <bitmap>maps\forest-dead-camp.png</bitmap>
+          <bitmap>maps/forest-dead-camp.png</bitmap>
         </image>
         <name type="string">forest-dead-camp.png</name>
       </id-00010>
       <id-00011>
         <image type="image">
-          <bitmap>maps\fork-in-road.jpg</bitmap>
+          <bitmap>maps/fork-in-road.jpg</bitmap>
         </image>
         <name type="string">fork-in-road.jpg</name>
       </id-00011>
       <id-00012>
         <image type="image">
-          <bitmap>maps\Hall of Bones.png</bitmap>
+          <bitmap>maps/Hall of Bones.png</bitmap>
         </image>
         <name type="string">Hall of Bones.png</name>
       </id-00012>
       <id-00013>
         <image type="image">
-          <bitmap>maps\Hall of Bones_gridless.png</bitmap>
+          <bitmap>maps/Hall of Bones_gridless.png</bitmap>
         </image>
         <name type="string">Hall of Bones_gridless.png</name>
       </id-00013>
       <id-00014>
         <image type="image">
-          <bitmap>maps\haunted-tomb-level1.jpg</bitmap>
+          <bitmap>maps/haunted-tomb-level1.jpg</bitmap>
         </image>
         <name type="string">haunted-tomb-level1.jpg</name>
       </id-00014>
       <id-00015>
         <image type="image">
-          <bitmap>maps\haunted-tomb-level2.jpg</bitmap>
+          <bitmap>maps/haunted-tomb-level2.jpg</bitmap>
         </image>
         <name type="string">haunted-tomb-level2.jpg</name>
       </id-00015>
       <id-00016>
         <image type="image">
-          <bitmap>maps\haunted-tomb-level2l.jpg</bitmap>
+          <bitmap>maps/haunted-tomb-level2l.jpg</bitmap>
         </image>
         <name type="string">haunted-tomb-level2l.jpg</name>
       </id-00016>
       <id-00017>
         <image type="image">
-          <bitmap>maps\hilly-pond.png</bitmap>
+          <bitmap>maps/hilly-pond.png</bitmap>
         </image>
         <name type="string">hilly-pond.png</name>
       </id-00017>
       <id-00018>
         <image type="image">
-          <bitmap>maps\Kingsmen Hall.png</bitmap>
+          <bitmap>maps/Kingsmen Hall.png</bitmap>
         </image>
         <name type="string">Kingsmen Hall.png</name>
       </id-00018>
       <id-00019>
         <image type="image">
-          <bitmap>maps\Kingsmen Hall_gridless.png</bitmap>
+          <bitmap>maps/Kingsmen Hall_gridless.png</bitmap>
         </image>
         <name type="string">Kingsmen Hall_gridless.png</name>
       </id-00019>
       <id-00020>
         <image type="image">
-          <bitmap>maps\Larders of Ill Omen Pt1.jpg</bitmap>
+          <bitmap>maps/Larders of Ill Omen Pt1.jpg</bitmap>
         </image>
         <name type="string">Larders of Ill Omen Pt1.jpg</name>
       </id-00020>
       <id-00021>
         <image type="image">
-          <bitmap>maps\princes-forest-pass.jpg</bitmap>
+          <bitmap>maps/princes-forest-pass.jpg</bitmap>
         </image>
         <name type="string">princes-forest-pass.jpg</name>
       </id-00021>
       <id-00022>
         <image type="image">
-          <bitmap>maps\resting-encounter.jpg</bitmap>
+          <bitmap>maps/resting-encounter.jpg</bitmap>
         </image>
         <name type="string">resting-encounter.jpg</name>
       </id-00022>
       <id-00023>
         <image type="image">
-          <bitmap>maps\river-crossing.jpg</bitmap>
+          <bitmap>maps/river-crossing.jpg</bitmap>
         </image>
         <name type="string">river-crossing.jpg</name>
       </id-00023>
       <id-00024>
         <image type="image">
-          <bitmap>maps\roadside.jpg</bitmap>
+          <bitmap>maps/roadside.jpg</bitmap>
         </image>
         <name type="string">roadside.jpg</name>
       </id-00024>
       <id-00025>
         <image type="image">
-          <bitmap>maps\stream-middle-broken-bridge.png</bitmap>
+          <bitmap>maps/stream-middle-broken-bridge.png</bitmap>
         </image>
         <name type="string">stream-middle-broken-bridge.png</name>
       </id-00025>
       <id-00026>
         <image type="image">
-          <bitmap>maps\trickledown-cave-bloodytreasure.jpg</bitmap>
+          <bitmap>maps/trickledown-cave-bloodytreasure.jpg</bitmap>
         </image>
         <name type="string">trickledown-cave-bloodytreasure.jpg</name>
       </id-00026>
       <id-00027>
         <image type="image">
-          <bitmap>maps\Warehouse_emptyVTT.jpg</bitmap>
+          <bitmap>maps/Warehouse_emptyVTT.jpg</bitmap>
         </image>
         <name type="string">Warehouse_emptyVTT.jpg</name>
       </id-00027>
       <id-00028>
         <image type="image">
-          <bitmap>maps\Warehouse_VTT.jpg</bitmap>
+          <bitmap>maps/Warehouse_VTT.jpg</bitmap>
         </image>
         <name type="string">Warehouse_VTT.jpg</name>
       </id-00028>

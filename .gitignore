@@ -1,5 +1,6 @@
 hookermaps/maps/*
 !hookermaps/maps/.gitkeep
+*.mod
 # Created by https://www.gitignore.io/api/python,sublimetext
 
 ### Python ###
