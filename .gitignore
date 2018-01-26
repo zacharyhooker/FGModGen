@@ -1,5 +1,13 @@
-hookermaps/maps/*
-!hookermaps/maps/.gitkeep
+arena/*
+bin/*
+!bin/.gitkeep
+data/encounter/*
+data/image/*
+*.sublime-project
+
+!data/encounter/.gitkeep
+!data/image/.gitkeep
+
 *.mod
 test.xml
 # Created by https://www.gitignore.io/api/python,sublimetext

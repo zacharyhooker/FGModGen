@@ -5,6 +5,12 @@ import zipfile
 
 
 class ModuleGen:
+
+    config = {
+    'image': {'extensions':['png', 'jpg'], 'type': 'image', 'secXML': {'name': 'bitmap', 'type':None}, 'open': False},
+    'encounter': {'extensions':['txt'], 'type': '', 'secXML': {'name': 'text', 'type':'formattedtext'}, 'open':True}
+    }
+
     """This helps create Modules (.mod) files for Fantasy Grounds.
 
     This should decrease the amount of time needed to organize maps by
@@ -13,7 +19,7 @@ class ModuleGen:
     """
 
     def __init__(self, name='MyModule', ruleset='Any', author='Me',
-                 xmlout='.', libdir=None, version=None):
+                 xmlout='.', libdir='data', version=None):
         """
         Args:
             name (str): Name of the module.
@@ -36,6 +42,8 @@ class ModuleGen:
         self.out = xmlout
         self.libdir = libdir
         self.version = self.getVersion(version)
+        self.root = lb.E.root('Data', version=self.version)
+        print(etree.tostring(self.root))
 
     def getVersion(self, version=None, inc=0.1):
         """Gets the version from the definition.xml file and increments it;
@@ -80,16 +88,53 @@ class ModuleGen:
                 zf.write(absname, arcname)
         zf.close()
 
+    def getF(self, type):
+        data = []
+        xid = 1
+        ddir = '{}/{}'.format(self.libdir, type)
+        xmlCall = getattr(lb.E, type)
+        root = xmlCall(lb.E.category(name="", mergeid="", baseicon="1", decalicon="1"))
+        if path.isdir(ddir):
+            for filename in listdir(ddir):
+                name, ext = filename.rsplit('.', 1)
+                loc = '{}/{}.{}'.format(ddir, name, ext)
+                conf = self.config[type]
+                secXML = getattr(lb.E, conf['secXML']['name'])
+                if any(ext in x for x in conf['extensions']):
+                    if conf['open']:
+                        with open(loc) as f:
+                            fdata = f.read()
+                        item = getattr(lb.E, "id-%05d"%xid)(
+                            xmlCall(secXML(fdata, type=conf['secXML']['type']), **({'type': conf['type']} if conf['type'] == True else {})),
+                            lb.E.name(name, type="string")
+                        )
+                    else:
+                        relpath = path.relpath(ddir, self.out)
+                        item = getattr(lb.E, "id-%05d"%xid)(
+                            xmlCall(secXML(relpath+'/'+filename), type=conf['type']),
+                            lb.E.name(name, type="string")
+                        )
+                    data.append(item)
+                    xid += 1
+        cat = root.find('.//category')
+        for item in data:
+            cat.append(item)
+
+        return etree.ElementTree(root)
+
     def _getDB(self):
         """ Grabs, and outputs xml, the information needed for the db.xml, this includes files in the libdir
         as well as other information needed for building categories. Currently this only 
-        works for images, though it will be expanded for other data points."""
+        works for images, though it will be expanded for other data points.
+        """
         imgId = 1
         root = lb.E.root(lb.E.image(lb.E.category(name="", mergeid="", baseicon="1", decalicon="1")), version=self.version)
         images = []
-        for filename in listdir(self.libdir):
-            ext = filename.split('.')[-1]
-            if ext == 'jpg' or ext == 'png':
+        ddir = '{}/image'.format(self.libdir)
+        for filename in listdir(ddir):
+            name, ext = filename.rsplit('.', 1)
+            conf = self.config['image']
+            if any(ext in x for x in conf['extensions']):
                 relpath = path.relpath(self.libdir, self.out)
                 img = getattr(lb.E, "id-%05d"%imgId)(
                     lb.E.image(lb.E.bitmap(relpath+'/'+filename), type="image"),
@@ -104,9 +149,11 @@ class ModuleGen:
 
         return etree.ElementTree(root)
 
+
     def _getDefinition(self):
         """ Builds the definition.xml structure with the data passed in to init.
-        Includes versioning, ruleset, author and name."""
+        Includes versioning, ruleset, author and name.
+        """
         root = etree.Element('root')
         root.set('version', self.version)
         elements = ['name', 'ruleset', 'author']
@@ -117,7 +164,10 @@ class ModuleGen:
         return etree.ElementTree(root)
 
 
-x = ModuleGen('HMaps', author='Hooker', xmlout='hookermaps', libdir='hookermaps/maps')
+x = ModuleGen('HMaps', author='Hooker', xmlout='bin')
+print(etree.tostring(x._getDB()))
+#print(etree.tostring(x._getDB()))
+"""
 x.genXML()
-x.zip()
 x.zip('S:\Fantasy Grounds\Data\modules')
+"""
