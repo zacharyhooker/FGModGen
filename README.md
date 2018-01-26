@@ -8,7 +8,7 @@ TODO:
   Implement encounters and other basic module information for ease of packing.
 
 
-These directions should still work, but after the most recent update (that implements encounters) you may need to change the construction parameters (xmlout/libdir).
+#### These directions should still work, but after the most recent update (that implements encounters) you may need to change the construction parameters (xmlout/libdir).
 
 Basic definition.xml generation:
 
